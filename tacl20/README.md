@@ -20,5 +20,7 @@
 * To build clusters, please follow these steps: <br />
   + cat UFAL.med.en ECB.en-fr.en IT.en-fr.en JRC-Acquis.en-fr.en Tanzil.en-fr.en TED2013.en-fr.en > all.en <br />
   + cat UFAL.med.fr ECB.en-fr.fr IT.en-fr.fr JRC-Acquis.en-fr.fr Tanzil.en-fr.fr TED2013.en-fr.fr > all.fr <br />
-  + use index files 
+  + use index files all.train.en.cluster.XXX.detok.index to build corpus of cluster XXX from all.en, all.fr <br />
+  
+If you have any question, please send an email to minhquang.pham@limsi.fr
   
