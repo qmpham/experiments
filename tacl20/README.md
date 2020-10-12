@@ -7,6 +7,12 @@
     + cd fr-en <br />
     + cat *_en.txt > medline.en <br />
     + cat *_fr.txt > medline.fr <br />
-  
-    
+  + For UFAL: <br />
+    + cd UFAL_medical_shuffled/ <br />
+    + gunzip shuffled.fr-en.gz <br />
+    + cut -f1 shuffled.fr-en > UFAL.fr <br />
+    + cut -f2 shuffled.fr-en > UFAL.en <br />
+  + cat medline.en UFAL.en > UFAL.med.en <br />
+  + cat medline.fr UFAL.fr > UFAL.med.fr <br />
+  + Using corresponding index file to extract sentences from UFAL.med.en, UFAL.med.fr <br />
 
