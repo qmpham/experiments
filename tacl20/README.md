@@ -4,4 +4,9 @@
   + Downloads UFAL corpora at https://ufal.mff.cuni.cz/ufal_medical_corpus <br />
   + Extracts 2 downloaded files <br />
   + For medline: <br />
+    + cd fr-en <br />
+    + cat *_en.txt > medline.en <br />
+    + cat *_fr.txt > medline.fr <br />
+  
+    
 
