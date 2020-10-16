@@ -1,26 +1,40 @@
-# experiments
-* Please use corpora_download.sh to build ECB, JRC, IT, TED and Koran corpora. <br />
-* For medical corpora please do following steps: <br />
-  + Downloads medline corpora at https://drive.google.com/drive/folders/1yBfh_KFSN0XxP2k9rnkxKNKYvjpj703p <br />
-  + Downloads UFAL corpora at https://ufal.mff.cuni.cz/ufal_medical_corpus <br />
-  + Extracts 2 downloaded files <br />
-  + For medline: <br />
-    + cd fr-en <br />
-    + cat *_en.txt > medline.en <br />
-    + cat *_fr.txt > medline.fr <br />
-  + For UFAL: <br />
-    + cd UFAL_medical_shuffled/ <br />
-    + gunzip shuffled.fr-en.gz <br />
-    + cut -f1 shuffled.fr-en > UFAL.fr <br />
-    + cut -f2 shuffled.fr-en > UFAL.en <br />
-  + cat medline.en UFAL.en > UFAL.med.en <br />
-  + cat medline.fr UFAL.fr > UFAL.med.fr <br />
-  + Using corresponding index file to extract sentences from UFAL.med.en, UFAL.med.fr <br />
+# Reproducing the experiments on Multidomain adaptation 
 
-* To build clusters, please follow these steps: <br />
-  + cat UFAL.med.en ECB.en-fr.en IT.en-fr.en JRC-Acquis.en-fr.en Tanzil.en-fr.en TED2013.en-fr.en > all.en <br />
-  + cat UFAL.med.fr ECB.en-fr.fr IT.en-fr.fr JRC-Acquis.en-fr.fr Tanzil.en-fr.fr TED2013.en-fr.fr > all.fr <br />
-  + use index files all.train.en.cluster.XXX.detok.index to build corpus of cluster XXX from all.en, all.fr <br />
-  
-If you have any question, please send an email to minhquang.pham@limsi.fr
+This repos contains the necessary data to reproduce the experiments on multidomain adaptation reported in:
+
+Our experiments use French-English parallel data from various sources, which are then split into train, dev and test sets.
+
+* Use `corpora_download.sh` to download and build datasets for the ECB, JRC, IT, TED and Koran corpora. These data will be downloaded from the [Opus Web site](http://opus.lingfil.uu.se/).
+* For the medical corpora the following steps need to be taken:
+  + Downloads [Medline corpora](https://drive.google.com/drive/folders/1yBfh_KFSN0XxP2k9rnkxKNKYvjpj703p)
+  + Downloads [UFAL corpora](https://ufal.mff.cuni.cz/ufal_medical_corpus)
+  + Extract the corresponding archive files
+  + For Medline:
+  ```
+    cd fr-en
+    cat *_en.txt > medline.en
+    cat *_fr.txt > medline.fr
+  ```
+  + For UFAL:
+  ```
+    cd UFAL_medical_shuffled/ 
+    gunzip shuffled.fr-en.gz 
+    cut -f1 shuffled.fr-en > UFAL.fr 
+    cut -f2 shuffled.fr-en > UFAL.en 
+  ```
+  + Merge the two data sources:
+  ```
+  cat medline.en UFAL.en > UFAL.med.en 
+  cat medline.fr UFAL.fr > UFAL.med.fr 
+  ```
+  + Use the corresponding index files to extract sentences from `UFAL.med.en`, `UFAL.med.fr`
+
+* To reproduce our automatic clustering, please follow these steps:
+```
+  cat UFAL.med.en ECB.en-fr.en IT.en-fr.en JRC-Acquis.en-fr.en Tanzil.en-fr.en TED2013.en-fr.en > all.en
+  cat UFAL.med.fr ECB.en-fr.fr IT.en-fr.fr JRC-Acquis.en-fr.fr Tanzil.en-fr.fr TED2013.en-fr.fr > all.fr
+```
+Then use index files all.train.en.cluster.XXX.detok.index to build corpus of cluster XXX from all.en, all.fr
+
+Please address remaining questions to [Minh Quang Pham](mailto:minhquang.pham@limsi.fr)
   
