@@ -34,7 +34,7 @@ Our experiments use French-English parallel data from various sources, which are
   cat UFAL.med.en ECB.en-fr.en IT.en-fr.en JRC-Acquis.en-fr.en Tanzil.en-fr.en TED2013.en-fr.en > all.en
   cat UFAL.med.fr ECB.en-fr.fr IT.en-fr.fr JRC-Acquis.en-fr.fr Tanzil.en-fr.fr TED2013.en-fr.fr > all.fr
 ```
-Then use index files all.train.en.cluster.XXX.detok.index to build corpus of cluster XXX from all.en, all.fr
+Then use index files `all.train.en.cluster.XXX.detok.index` to build the corpus of cluster XXX from `all.en`, `all.fr`
 
 Please address remaining questions to [Minh Quang Pham](mailto:minhquang.pham@limsi.fr)
   
