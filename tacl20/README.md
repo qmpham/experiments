@@ -6,8 +6,8 @@ Our experiments use French-English parallel data from various sources, which are
 
 * Use `corpora_download.sh` to download and build datasets for the ECB, JRC, IT, TED and Koran corpora. These data will be downloaded from the [Opus Web site](http://opus.lingfil.uu.se/).
 * For the medical corpora the following steps need to be taken:
-  + Downloads [Medline corpora](https://drive.google.com/drive/folders/1yBfh_KFSN0XxP2k9rnkxKNKYvjpj703p)
-  + Downloads [UFAL corpora](https://ufal.mff.cuni.cz/ufal_medical_corpus)
+  + Download [Medline corpora](https://drive.google.com/drive/folders/1yBfh_KFSN0XxP2k9rnkxKNKYvjpj703p)
+  + Download [UFAL corpora](https://ufal.mff.cuni.cz/ufal_medical_corpus)
   + Extract the corresponding archive files
   + For Medline:
   ```
