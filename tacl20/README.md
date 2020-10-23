@@ -2,6 +2,8 @@
 
 This repos contains the necessary data to reproduce the experiments on multidomain adaptation reported in:
 
+Minh Quang Pham, Josep Crego, François Yvon. Revisiting Multi-Domain Machine Translation, to appear in Transactions of the ACL, 20. 
+
 Our experiments use French-English parallel data from various sources, which are then split into train, dev and test sets.
 
 * Use `corpora_download.sh` to download and build datasets for the ECB, JRC, IT, TED and Koran corpora. These data will be downloaded from the [Opus Web site](http://opus.lingfil.uu.se/).
