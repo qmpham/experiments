@@ -1,18 +1,21 @@
 #create ECB corpora
 wget https://object.pouta.csc.fi/OPUS-ECB/v1/moses/en-fr.txt.zip
 unzip en-fr.txt.zip
+rm en-fr.txt.zip
 rm README
 rm LICENSE
 
 #create JRC corpora
 wget https://object.pouta.csc.fi/OPUS-JRC-Acquis/v3.0/moses/en-fr.txt.zip
 unzip en-fr.txt.zip
+rm en-fr.txt.zip
 rm README
 rm LICENSE
 
 #create Koran corpora
 wget https://object.pouta.csc.fi/OPUS-Tanzil/v1/moses/en-fr.txt.zip
 unzip en-fr.txt.zip
+rm en-fr.txt.zip
 rm README
 rm LICENSE
 
