@@ -1,3 +1,9 @@
+if ! command -v unzip &> /dev/null
+then
+    echo "unzip could not be found"
+    exit 2
+fi
+
 #create ECB corpora
 wget https://object.pouta.csc.fi/OPUS-ECB/v1/moses/en-fr.txt.zip
 unzip en-fr.txt.zip
@@ -45,6 +51,7 @@ unzip download.php?f=OpenOffice%2Fv2%2Fmoses%2Fen-fr.txt.zip
 rm download.php?f=OpenOffice%2Fv2%2Fmoses%2Fen-fr.txt.zip
 rm README
 cat Ubuntu.en-fr.en KDE4.en-fr.en PHP.en-fr.en OpenOffice.en-fr.en GNOME.en-fr.en > IT.en-fr.en
+cat Ubuntu.en-fr.fr KDE4.en-fr.fr PHP.en-fr.fr OpenOffice.en-fr.fr GNOME.en-fr.fr > IT.en-fr.fr
 
 #create news corpora
 wget http://data.statmt.org/wmt17/translation-task/training-parallel-nc-v12.tgz
